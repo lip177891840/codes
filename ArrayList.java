@@ -23,8 +23,15 @@ public class ArrayList{
 		list[size]=element;
 		size++;
 	}
-	public int remove(int element){
-		return 1;
+	public int remove(int index){
+		if(index<size){
+		int returnElement=list[index];
+			for(int i=index;i<size-1;i++){
+				list[i]=list[i+1];
+			}
+			return returnElement;
+		}
+		return -1;
 	}
 	public void set(int index,int element){
 		
