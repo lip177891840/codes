@@ -22,6 +22,13 @@ public class ArrayList{
 	public void add(int element){
 		list[size]=element;
 		size++;
+		if(size/list.length>0.75){
+			int[] newList=new int[size*2];
+			for(int i=0;i<size;i++){
+				newList[i]=list[i];
+			}
+			list=newList;
+		}
 	}
 	public int remove(int index){
 		if(index<size){
@@ -34,10 +41,10 @@ public class ArrayList{
 		return -1;
 	}
 	public void set(int index,int element){
-		
+		list[index]=element;
 	}
 	public int get(int index){
-		return 1;
+		return list[index];
 	}
 
 	public void print(){
@@ -52,7 +59,21 @@ public class ArrayList{
 		arrayList.add(34325);
 		arrayList.add(3);
 		arrayList.add(34325);
-		
+		arrayList.add(3);
+		arrayList.add(34325);
+		arrayList.add(3);
+		arrayList.add(34325);
+		arrayList.add(3);
+		arrayList.add(34325);
+		arrayList.add(3);
+		arrayList.add(34325);
+		arrayList.add(3);
+		arrayList.add(34325);
+		arrayList.add(3);
+		arrayList.add(34325);
+		arrayList.add(3);
+		arrayList.add(34325);
+		// arrayList.remove(1);
 		arrayList.print();
 	}
 }
